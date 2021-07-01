@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>卢肇</title>
-    <link>http://ifarewell.github.io/</link>
+    <link>http://81.68.255.144/</link>
     <description>Recent content on 卢肇</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 30 Jun 2021 13:16:28 +0800</lastBuildDate><atom:link href="http://ifarewell.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jun 2021 13:16:28 +0800</lastBuildDate><atom:link href="http://81.68.255.144/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello World!</title>
-      <link>http://ifarewell.github.io/post/first/</link>
+      <link>http://81.68.255.144/post/first/</link>
       <pubDate>Wed, 30 Jun 2021 13:16:28 +0800</pubDate>
       
-      <guid>http://ifarewell.github.io/post/first/</guid>
+      <guid>http://81.68.255.144/post/first/</guid>
       
         <description>从头开始维护个人博客的想法一直在脑海中持续了很久。一方面，通过整个搭建维护流程，可以些许弥补本人计网知识水平和工程经验的欠缺，另一方面，也是希望在社交媒体之外有一个记录个人技术经历与生活碎碎念的场所。但由于个人学业任务、缺乏启动契机以及游戏太好玩等因素，一直未能将该想法付诸实现。😜😜</description>
       
