@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Zhao Lu</title>
+    <link>http://ifarewell.github.io/en/tags/</link>
+    <description>Recent content in Tags on Zhao Lu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 30 Jun 2021 13:16:28 +0800</lastBuildDate><atom:link href="http://ifarewell.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Thoughts</title>
+      <link>http://ifarewell.github.io/en/tags/thoughts/</link>
+      <pubDate>Wed, 30 Jun 2021 13:16:28 +0800</pubDate>
+      
+      <guid>http://ifarewell.github.io/en/tags/thoughts/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
