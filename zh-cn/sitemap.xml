@@ -2,6 +2,84 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://81.68.255.144/tags/git/</loc>
+    <lastmod>2021-07-01T20:49:46+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://81.68.255.144/en/tags/git/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="http://81.68.255.144/tags/git/"
+                />
+  </url><url>
+    <loc>http://81.68.255.144/tags/hugo/</loc>
+    <lastmod>2021-07-01T20:49:46+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://81.68.255.144/en/tags/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="http://81.68.255.144/tags/hugo/"
+                />
+  </url><url>
+    <loc>http://81.68.255.144/post/</loc>
+    <lastmod>2021-07-01T20:49:46+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://81.68.255.144/en/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="http://81.68.255.144/post/"
+                />
+  </url><url>
+    <loc>http://81.68.255.144/tags/</loc>
+    <lastmod>2021-07-01T20:49:46+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://81.68.255.144/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="http://81.68.255.144/tags/"
+                />
+  </url><url>
+    <loc>http://81.68.255.144/post/maintain/</loc>
+    <lastmod>2021-07-01T20:49:46+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://81.68.255.144/en/post/maintain/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="http://81.68.255.144/post/maintain/"
+                />
+  </url><url>
+    <loc>http://81.68.255.144/</loc>
+    <lastmod>2021-07-01T20:49:46+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://81.68.255.144/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="http://81.68.255.144/"
+                />
+  </url><url>
     <loc>http://81.68.255.144/post/first/</loc>
     <lastmod>2021-06-30T13:16:28+08:00</lastmod>
     <xhtml:link
@@ -15,32 +93,6 @@
                 href="http://81.68.255.144/post/first/"
                 />
   </url><url>
-    <loc>http://81.68.255.144/post/</loc>
-    <lastmod>2021-06-30T13:16:28+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://81.68.255.144/en/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="http://81.68.255.144/post/"
-                />
-  </url><url>
-    <loc>http://81.68.255.144/tags/</loc>
-    <lastmod>2021-06-30T13:16:28+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://81.68.255.144/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="http://81.68.255.144/tags/"
-                />
-  </url><url>
     <loc>http://81.68.255.144/tags/thoughts/</loc>
     <lastmod>2021-06-30T13:16:28+08:00</lastmod>
     <xhtml:link
@@ -52,19 +104,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="http://81.68.255.144/tags/thoughts/"
-                />
-  </url><url>
-    <loc>http://81.68.255.144/</loc>
-    <lastmod>2021-06-30T13:16:28+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://81.68.255.144/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="http://81.68.255.144/"
                 />
   </url><url>
     <loc>http://81.68.255.144/categories/</loc>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on 卢肇</title>
+    <link>http://81.68.255.144/tags/git/</link>
+    <description>Recent content in Git on 卢肇</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 01 Jul 2021 20:49:46 +0800</lastBuildDate><atom:link href="http://81.68.255.144/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>博客维护方式</title>
+      <link>http://81.68.255.144/post/maintain/</link>
+      <pubDate>Thu, 01 Jul 2021 20:49:46 +0800</pubDate>
+      
+      <guid>http://81.68.255.144/post/maintain/</guid>
+      
+        <description>鉴于本人三天打鱼两天晒网的习性，下次更新博客已不知是猴年马月，特在此记录本博客的维护方式，以便于日后的维护工作。</description>
+      
+    </item>
+    
+  </channel>
+</rss>

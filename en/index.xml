@@ -6,7 +6,18 @@
     <description>Recent content on Zhao Lu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 30 Jun 2021 13:16:28 +0800</lastBuildDate><atom:link href="http://81.68.255.144/en/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Jul 2021 20:49:46 +0800</lastBuildDate><atom:link href="http://81.68.255.144/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>blog maintenance approach</title>
+      <link>http://81.68.255.144/en/post/maintain/</link>
+      <pubDate>Thu, 01 Jul 2021 20:49:46 +0800</pubDate>
+      
+      <guid>http://81.68.255.144/en/post/maintain/</guid>
+      
+        <description>In view of my working by fits and starts，it is hard to predict the next time I update this blog, hence I record the approach to maintaining the blog, just in case.</description>
+      
+    </item>
+    
     <item>
       <title>Hello World!</title>
       <link>http://81.68.255.144/en/post/first/</link>
