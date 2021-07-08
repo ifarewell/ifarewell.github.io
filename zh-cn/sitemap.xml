@@ -2,120 +2,120 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://ifarewell.github.io/tags/git/</loc>
+    <loc>https://www.ifarewell.xyz/tags/git/</loc>
     <lastmod>2021-07-01T20:49:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://ifarewell.github.io/en/tags/git/"
+                href="https://www.ifarewell.xyz/en/tags/git/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://ifarewell.github.io/tags/git/"
+                href="https://www.ifarewell.xyz/tags/git/"
                 />
   </url><url>
-    <loc>http://ifarewell.github.io/tags/hugo/</loc>
+    <loc>https://www.ifarewell.xyz/tags/hugo/</loc>
     <lastmod>2021-07-01T20:49:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://ifarewell.github.io/en/tags/hugo/"
+                href="https://www.ifarewell.xyz/en/tags/hugo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://ifarewell.github.io/tags/hugo/"
+                href="https://www.ifarewell.xyz/tags/hugo/"
                 />
   </url><url>
-    <loc>http://ifarewell.github.io/post/</loc>
+    <loc>https://www.ifarewell.xyz/post/</loc>
     <lastmod>2021-07-01T20:49:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://ifarewell.github.io/en/post/"
+                href="https://www.ifarewell.xyz/en/post/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://ifarewell.github.io/post/"
+                href="https://www.ifarewell.xyz/post/"
                 />
   </url><url>
-    <loc>http://ifarewell.github.io/tags/</loc>
+    <loc>https://www.ifarewell.xyz/tags/</loc>
     <lastmod>2021-07-01T20:49:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://ifarewell.github.io/en/tags/"
+                href="https://www.ifarewell.xyz/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://ifarewell.github.io/tags/"
+                href="https://www.ifarewell.xyz/tags/"
                 />
   </url><url>
-    <loc>http://ifarewell.github.io/post/maintain/</loc>
+    <loc>https://www.ifarewell.xyz/post/maintain/</loc>
     <lastmod>2021-07-01T20:49:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://ifarewell.github.io/en/post/maintain/"
+                href="https://www.ifarewell.xyz/en/post/maintain/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://ifarewell.github.io/post/maintain/"
+                href="https://www.ifarewell.xyz/post/maintain/"
                 />
   </url><url>
-    <loc>http://ifarewell.github.io/</loc>
+    <loc>https://www.ifarewell.xyz/</loc>
     <lastmod>2021-07-01T20:49:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://ifarewell.github.io/en/"
+                href="https://www.ifarewell.xyz/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://ifarewell.github.io/"
+                href="https://www.ifarewell.xyz/"
                 />
   </url><url>
-    <loc>http://ifarewell.github.io/post/first/</loc>
+    <loc>https://www.ifarewell.xyz/post/first/</loc>
     <lastmod>2021-06-30T13:16:28+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://ifarewell.github.io/en/post/first/"
+                href="https://www.ifarewell.xyz/en/post/first/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://ifarewell.github.io/post/first/"
+                href="https://www.ifarewell.xyz/post/first/"
                 />
   </url><url>
-    <loc>http://ifarewell.github.io/tags/thoughts/</loc>
+    <loc>https://www.ifarewell.xyz/tags/thoughts/</loc>
     <lastmod>2021-06-30T13:16:28+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://ifarewell.github.io/en/tags/thoughts/"
+                href="https://www.ifarewell.xyz/en/tags/thoughts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://ifarewell.github.io/tags/thoughts/"
+                href="https://www.ifarewell.xyz/tags/thoughts/"
                 />
   </url><url>
-    <loc>http://ifarewell.github.io/categories/</loc>
+    <loc>https://www.ifarewell.xyz/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://ifarewell.github.io/en/categories/"
+                href="https://www.ifarewell.xyz/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://ifarewell.github.io/categories/"
+                href="https://www.ifarewell.xyz/categories/"
                 />
   </url>
 </urlset>
