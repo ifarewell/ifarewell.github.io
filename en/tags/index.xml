@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Zhao Lu</title>
-    <link>https://www.ifarewell.xyz/en/tags/</link>
+    <link>http://ifarewell.github.io/en/tags/</link>
     <description>Recent content in Tags on Zhao Lu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 01 Jul 2021 20:49:46 +0800</lastBuildDate><atom:link href="https://www.ifarewell.xyz/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Jul 2021 20:49:46 +0800</lastBuildDate><atom:link href="http://ifarewell.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git</title>
-      <link>https://www.ifarewell.xyz/en/tags/git/</link>
+      <link>http://ifarewell.github.io/en/tags/git/</link>
       <pubDate>Thu, 01 Jul 2021 20:49:46 +0800</pubDate>
       
-      <guid>https://www.ifarewell.xyz/en/tags/git/</guid>
+      <guid>http://ifarewell.github.io/en/tags/git/</guid>
       
         <description></description>
       
@@ -20,10 +20,10 @@
     
     <item>
       <title>Hugo</title>
-      <link>https://www.ifarewell.xyz/en/tags/hugo/</link>
+      <link>http://ifarewell.github.io/en/tags/hugo/</link>
       <pubDate>Thu, 01 Jul 2021 20:49:46 +0800</pubDate>
       
-      <guid>https://www.ifarewell.xyz/en/tags/hugo/</guid>
+      <guid>http://ifarewell.github.io/en/tags/hugo/</guid>
       
         <description></description>
       
@@ -31,10 +31,10 @@
     
     <item>
       <title>Thoughts</title>
-      <link>https://www.ifarewell.xyz/en/tags/thoughts/</link>
+      <link>http://ifarewell.github.io/en/tags/thoughts/</link>
       <pubDate>Wed, 30 Jun 2021 13:16:28 +0800</pubDate>
       
-      <guid>https://www.ifarewell.xyz/en/tags/thoughts/</guid>
+      <guid>http://ifarewell.github.io/en/tags/thoughts/</guid>
       
         <description></description>
       
