@@ -6,7 +6,18 @@
     <description>Recent content on 卢肇</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 01 Jul 2021 20:49:46 +0800</lastBuildDate><atom:link href="https://www.ifarewell.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Oct 2021 16:00:13 +0800</lastBuildDate><atom:link href="https://www.ifarewell.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Federated Deep Learning with Bayesian Privacy 阅读笔记</title>
+      <link>https://www.ifarewell.xyz/post/federated_deep_learning_with_bayesian_privacy/</link>
+      <pubDate>Tue, 26 Oct 2021 16:00:13 +0800</pubDate>
+      
+      <guid>https://www.ifarewell.xyz/post/federated_deep_learning_with_bayesian_privacy/</guid>
+      
+        <description>前段时间 刷讲座课学分 有幸参加了微众银行（WeBank）的范力欣博士与康焱博士的讲座“联邦学习：目的、方法及应用”，对其中提到的Passport方法感到好奇，因此对相关论文进行了阅读，并在组会上进行了分享。在此对组会上的PPT内容进行整理记录。</description>
+      
+    </item>
+    
     <item>
       <title>博客维护方式</title>
       <link>https://www.ifarewell.xyz/post/maintain/</link>
@@ -14,7 +25,7 @@
       
       <guid>https://www.ifarewell.xyz/post/maintain/</guid>
       
-        <description>鉴于本人三天打鱼两天晒网的习性，下次更新博客已不知是猴年马月，特在此记录本博客的维护方式，以便于日后的维护工作。</description>
+        <description>鉴于本人三天打鱼两天晒网的习性，下次更新博客已不知是猴年马月 ，特在此记录本博客的维护方式，以便于日后的维护工作。</description>
       
     </item>
     
@@ -25,7 +36,7 @@
       
       <guid>https://www.ifarewell.xyz/post/first/</guid>
       
-        <description>从头开始维护个人博客的想法一直在脑海中持续了很久。一方面，通过整个搭建维护流程，可以些许弥补本人计网知识水平和工程经验的欠缺，另一方面，也是希望在社交媒体之外有一个记录个人技术经历与生活碎碎念的场所。但由于个人学业任务、缺乏启动契机以及游戏太好玩等因素，一直未能将该想法付诸实现😜😜。</description>
+        <description>从头开始维护个人博客的想法一直在脑海中持续了很久。一方面，通过整个搭建维护流程，可以些许弥补本人计网知识水平和工程经验的欠缺，另一方面，也是希望在社交媒体之外有一个记录个人技术经历与生活碎碎念的场所。但由于个人学业任务、缺乏启动契机 以及游戏太好玩 等因素，一直未能将该想法付诸实现😜😜。</description>
       
     </item>
     
