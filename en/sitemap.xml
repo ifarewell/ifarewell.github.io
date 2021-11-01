@@ -2,120 +2,120 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.ifarewell.xyz/en/post/maintain/</loc>
+    <loc>/en/post/maintain/</loc>
     <lastmod>2021-07-01T20:49:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://www.ifarewell.xyz/post/maintain/"
+                href="/post/maintain/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.ifarewell.xyz/en/post/maintain/"
+                href="/en/post/maintain/"
                 />
   </url><url>
-    <loc>https://www.ifarewell.xyz/en/tags/git/</loc>
+    <loc>/en/tags/git/</loc>
     <lastmod>2021-07-01T20:49:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://www.ifarewell.xyz/tags/git/"
+                href="/tags/git/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.ifarewell.xyz/en/tags/git/"
+                href="/en/tags/git/"
                 />
   </url><url>
-    <loc>https://www.ifarewell.xyz/en/tags/hugo/</loc>
+    <loc>/en/tags/hugo/</loc>
     <lastmod>2021-07-01T20:49:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://www.ifarewell.xyz/tags/hugo/"
+                href="/tags/hugo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.ifarewell.xyz/en/tags/hugo/"
+                href="/en/tags/hugo/"
                 />
   </url><url>
-    <loc>https://www.ifarewell.xyz/en/post/</loc>
+    <loc>/en/post/</loc>
     <lastmod>2021-07-01T20:49:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://www.ifarewell.xyz/post/"
+                href="/post/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.ifarewell.xyz/en/post/"
+                href="/en/post/"
                 />
   </url><url>
-    <loc>https://www.ifarewell.xyz/en/tags/</loc>
+    <loc>/en/tags/</loc>
     <lastmod>2021-07-01T20:49:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://www.ifarewell.xyz/tags/"
+                href="/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.ifarewell.xyz/en/tags/"
+                href="/en/tags/"
                 />
   </url><url>
-    <loc>https://www.ifarewell.xyz/en/</loc>
+    <loc>/en/</loc>
     <lastmod>2021-07-01T20:49:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://www.ifarewell.xyz/"
+                href="/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.ifarewell.xyz/en/"
+                href="/en/"
                 />
   </url><url>
-    <loc>https://www.ifarewell.xyz/en/post/first/</loc>
+    <loc>/en/post/first/</loc>
     <lastmod>2021-06-30T13:16:28+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://www.ifarewell.xyz/post/first/"
+                href="/post/first/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.ifarewell.xyz/en/post/first/"
+                href="/en/post/first/"
                 />
   </url><url>
-    <loc>https://www.ifarewell.xyz/en/tags/thoughts/</loc>
+    <loc>/en/tags/thoughts/</loc>
     <lastmod>2021-06-30T13:16:28+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://www.ifarewell.xyz/tags/thoughts/"
+                href="/tags/thoughts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.ifarewell.xyz/en/tags/thoughts/"
+                href="/en/tags/thoughts/"
                 />
   </url><url>
-    <loc>https://www.ifarewell.xyz/en/categories/</loc>
+    <loc>/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://www.ifarewell.xyz/categories/"
+                href="/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.ifarewell.xyz/en/categories/"
+                href="/en/categories/"
                 />
   </url>
 </urlset>
