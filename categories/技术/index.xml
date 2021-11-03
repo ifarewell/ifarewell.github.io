@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术 on 卢肇的博客</title>
+    <link>/categories/%E6%8A%80%E6%9C%AF/</link>
+    <description>Recent content in 技术 on 卢肇的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright> [Farewell](https://www.ifarewell.xyz/) all content copyrights reserved.</copyright>
+    <lastBuildDate>Thu, 01 Jul 2021 20:49:46 +0800</lastBuildDate><atom:link href="/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>博客维护方式</title>
+      <link>/posts/maintain/</link>
+      <pubDate>Thu, 01 Jul 2021 20:49:46 +0800</pubDate>
+      
+      <guid>/posts/maintain/</guid>
+      <description>鉴于本人三天打鱼两天晒网的习性，下次更新博客已不知是猴年马月 ，特在此记录本博客的维护方式，以便于日后的维护工作。
+概述 本博客同时发布于本人的Github Page 与个人服务器 上，分别通过ifarewell.github.io 的master与server分支进行维护。实际上，该任务可通过将其中一方重定向至另一方完成。但为了练习 Git 中的分支管理相关功能，我决定以此稍显复杂的方式进行。
+本博客采用Hugo  与其中的Anatole 主题进行构建。前述两个 Git 分支的区别主要在于，使用 hugo 进行页面生成时，配置文件 config.toml 中 baseURL 需设定为博客地址，这将使得所生成页面文件夹 public 中多个文件的内容存在差异。
+文章创建 在博客项目的根目录下，使用 hugo 创建新文章。
+hugo new content/zh-cn/post/filename.md 调用该指令，hugo 将会依据根目录下 archetypes/default.md 生成新文章模板，其中包括标题、发布时间、文章描述、文章标签等信息。
+效果测试 文章创建完毕后，在项目根目录中使用 hugo server 进行页面效果测试。
+hugo server -D 通过该指令，可以在 http://localhost:1313 中查看网页效果，并且可以将本地文章的修改实时渲染出来。
+页面生成 在文章编写完毕之后，在博客项目根目录下，使用 hugo 生成页面至 public 文件夹中。
+hugo --config configFilename1.toml, configFilename2.toml 该指令会在根目录下寻找给定的配置文件并依据这些文件进行页面生成。在不显式给定配置文件时，hugo 默认依据配置文件 config.toml 或配置文件夹 config/_default 下所有配置文件来进行页面生成（依据调试经验，前者优先级似乎高于后者）。
+值得注意的是，本地调试过程中，配置文件 config.toml 中 baseURL 的设定对结果似乎无影响。但在部署至 Github Page 或个人服务器上之前， 需要将其设定为实际页面的地址再进行生成。</description>
+    </item>
+    
+  </channel>
+</rss>

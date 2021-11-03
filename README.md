@@ -1,0 +1,1 @@
+This is Farewell's personal blog. Built on Hugo with theme [Diary](https://github.com/amazingrise/hugo-theme-diary) by [Rise](https://risehere.net/).

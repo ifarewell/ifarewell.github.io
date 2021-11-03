@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html><head>
+<title>博客维护方式</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="记录个人博客维护方式。">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:title" content="博客维护方式" />
+<meta property="og:description" content="记录个人博客维护方式。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/maintain/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-07-01T20:49:46&#43;08:00" />
+<meta property="article:modified_time" content="2021-07-01T20:49:46&#43;08:00" /><meta property="og:site_name" content="Farewell&#39;s Blog" />
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="博客维护方式"/>
+<meta name="twitter:description" content="记录个人博客维护方式。"/>
+
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [["$", "$"]],
+    },
+    displayMath: [
+      ["$$", "$$"],
+      ["\[\[", "\]\]"],
+    ],
+    svg: {
+      fontCache: "global",
+    },
+  };
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-03MW46RY0Z', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/journal.min.3f72a5fc8f5b5dd732a4b476aced0eece2156958d9d414316494ddb10593ddf7.css" integrity="sha256-P3Kl/I9bXdcypLR2rO0O7OIVaVjZ1BQxZJTdsQWT3fc=" media="screen">
+
+
+
+<link rel="stylesheet" href="/scss/dark-mode.min.c0082f0b082177f6fb3768ff91439a097de49689bd26f4d49f76d94ebb81e02d.css" integrity="sha256-wAgvCwghd/b7N2j/kUOaCX3klom9JvTUn3bZTruB4C0=" media="screen">
+
+
+<script src="/vendor/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+</script>
+
+
+
+
+
+
+  <script src="/js/toc.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: 'f64d20fc41778fa3b385',
+  clientSecret: 'c3affc0d88df550b5cb57c6fa4b5bca6e6b02e43',
+  repo: 'ifarewell.github.io',
+  owner: 'ifarewell',
+  admin: ['ifarewell'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="/">
+    
+        <div class="nav-title">
+            卢肇的博客
+        </div>
+        
+        <div class="nav-subtitle">
+            Farewell&#39;s Blog
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                归档
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                标签
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS Feed
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+
+<a href="https://beian.miit.gov.cn">赣 ICP 备 2021006252 号</a>
+
+<br>
+2021
+&copy;
+
+<a href="https://www.ifarewell.xyz/">Farewell</a> all content copyrights reserved.
+
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%a6%82%e8%bf%b0" onclick="onNavClick(`#概述-nav`)" id="概述-nav">
+									概述
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%96%87%e7%ab%a0%e5%88%9b%e5%bb%ba" onclick="onNavClick(`#文章创建-nav`)" id="文章创建-nav">
+									文章创建
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%95%88%e6%9e%9c%e6%b5%8b%e8%af%95" onclick="onNavClick(`#效果测试-nav`)" id="效果测试-nav">
+									效果测试
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%a1%b5%e9%9d%a2%e7%94%9f%e6%88%90" onclick="onNavClick(`#页面生成-nav`)" id="页面生成-nav">
+									页面生成
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%a1%b5%e9%9d%a2%e9%83%a8%e7%bd%b2" onclick="onNavClick(`#页面部署-nav`)" id="页面部署-nav">
+									页面部署
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%b8%aa%e4%ba%ba%e6%9c%8d%e5%8a%a1%e5%99%a8%e9%83%a8%e7%bd%b2" onclick="onNavClick(`#个人服务器部署-nav`)" id="个人服务器部署-nav">
+									个人服务器部署
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    归档
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    标签
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS Feed
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%a6%82%e8%bf%b0" onclick="onNavClick(`#概述-nav`)" id="概述-nav">
+									概述
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%96%87%e7%ab%a0%e5%88%9b%e5%bb%ba" onclick="onNavClick(`#文章创建-nav`)" id="文章创建-nav">
+									文章创建
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%95%88%e6%9e%9c%e6%b5%8b%e8%af%95" onclick="onNavClick(`#效果测试-nav`)" id="效果测试-nav">
+									效果测试
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%a1%b5%e9%9d%a2%e7%94%9f%e6%88%90" onclick="onNavClick(`#页面生成-nav`)" id="页面生成-nav">
+									页面生成
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%a1%b5%e9%9d%a2%e9%83%a8%e7%bd%b2" onclick="onNavClick(`#页面部署-nav`)" id="页面部署-nav">
+									页面部署
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%b8%aa%e4%ba%ba%e6%9c%8d%e5%8a%a1%e5%99%a8%e9%83%a8%e7%bd%b2" onclick="onNavClick(`#个人服务器部署-nav`)" id="个人服务器部署-nav">
+									个人服务器部署
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="/">
+            卢肇的博客
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">卢肇的博客</div>
+        
+        <div class="single-column-header-subtitle">Farewell&#39;s Blog</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    博客维护方式
+                    
+                    <div class="post-subtitle">
+                        记录个人博客维护方式。
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2021-07-01 20:49
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/%E6%8A%80%E6%9C%AF">技术</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/git">Git</a>
+                                &nbsp;
+                            
+                                <a href="/tags/hugo">Hugo</a>
+                                &nbsp;
+                            
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p><del> 鉴于本人三天打鱼两天晒网的习性，下次更新博客已不知是猴年马月 </del>，特在此记录本博客的维护方式，以便于日后的维护工作。</p>
+<h2 id="概述">概述</h2>
+<p>本博客同时发布于本人的<a href="https://ifarewell.github.io"> Github Page </a>与<a href="http://81.68.255.144"> 个人服务器 </a>上，分别通过<a href="https://github.com/ifarewell/ifarewell.github.io"> ifarewell.github.io </a>的master与server分支进行维护。实际上，该任务可通过将其中一方重定向至另一方完成。但为了练习 Git 中的分支管理相关功能，我决定以此稍显复杂的方式进行。</p>
+<p>本博客采用<a href="https://gohugo.io/"> Hugo </a> 与其中的<a href="https://themes.gohugo.io/anatole/"> Anatole </a>主题进行构建。前述两个 Git 分支的区别主要在于，使用 hugo 进行页面生成时，配置文件 <code>config.toml</code> 中 <code>baseURL</code> 需设定为博客地址，这将使得所生成页面文件夹 <code>public</code> 中多个文件的内容存在差异。</p>
+<h2 id="文章创建">文章创建</h2>
+<p>在博客项目的根目录下，使用 hugo 创建新文章。</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo new content/zh-cn/post/filename.md
+</code></pre></div><p>调用该指令，hugo 将会依据根目录下 <code>archetypes/default.md</code> 生成新文章模板，其中包括标题、发布时间、文章描述、文章标签等信息。</p>
+<h2 id="效果测试">效果测试</h2>
+<p>文章创建完毕后，在项目根目录中使用 hugo server 进行页面效果测试。</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo server -D
+</code></pre></div><p>通过该指令，可以在 <a href="http://localhost:1313">http://localhost:1313</a> 中查看网页效果，并且可以将本地文章的修改实时渲染出来。</p>
+<h2 id="页面生成">页面生成</h2>
+<p>在文章编写完毕之后，在博客项目根目录下，使用 hugo 生成页面至 <code>public</code> 文件夹中。</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo --config configFilename1.toml, configFilename2.toml
+</code></pre></div><p>该指令会在根目录下寻找给定的配置文件并依据这些文件进行页面生成。在不显式给定配置文件时，hugo 默认依据配置文件 <code>config.toml</code> 或配置文件夹 <code>config/_default</code> 下所有配置文件来进行页面生成（依据调试经验，前者优先级似乎高于后者）。</p>
+<p>值得注意的是，本地调试过程中，配置文件 <code>config.toml</code> 中 <code>baseURL</code> 的设定对结果似乎无影响。但在部署至 Github Page 或个人服务器上之前， 需要将其设定为实际页面的地址再进行生成。</p>
+<h2 id="页面部署">页面部署</h2>
+<p>页面生成后，进入 <code>public</code> 文件夹，使用 Git 将该文件夹同步至 Github 上。</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#228b22"># 首次提交前需要进行文件夹初始化</span>
+git init
+
+<span style="color:#228b22"># 为 Git 本地库添加远程库</span>
+git remote add origin git@github.com:ifarewell/ifarewell.github.io.git
+
+<span style="color:#228b22"># 查看当前版本状态</span>
+git status
+
+<span style="color:#228b22"># 添加所有修改过的文件</span>
+git add . 
+
+<span style="color:#228b22"># 将修改提交至本地库，可选择附上提交信息</span>
+git commit -m <span style="color:#cd5555">&#34;commit message&#34;</span>
+
+<span style="color:#228b22"># 将修改同步至远程库</span>
+git push -u origin master/server
+</code></pre></div><h2 id="个人服务器部署">个人服务器部署</h2>
+<p>经过前述过程，新生成的页面已提交至Github 上，通过<a href="https://ifarewell.github.io"> Github Page </a>已经可以成功访问更新后的页面。但个人服务器还需要多一步，即将 server 分支拉取至服务器上。</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git pull origin server:master
+</code></pre></div><p>此处master是服务器本地的分支名称，需要注意与远端的master分支相区别。</p>
+<hr>
+<p>至此，一篇新文章成功被创建——编写——部署至本人的<a href="https://ifarewell.github.io"> Github Page </a>与<a href="http://81.68.255.144"> 个人服务器 </a>上。希望这篇文章对想要基于 hugo 进行个人博客编写的读者有所帮助，也希望本人能够勤快、熟练地更博，尽量少参考这篇备用博文🤪🤪。</p>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2021-07-01</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="/posts/federated_deep_learning_with_bayesian_privacy/">
+			Next<br>Federated Deep Learning with Bayesian Privacy 阅读笔记
+                </a>
+                
+                
+                
+                <a class="older-posts" href="/posts/first/">
+			Previous<br>Hello World!
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+
+<a href="https://beian.miit.gov.cn">赣 ICP 备 2021006252 号</a>
+
+<br>
+2021
+&copy;
+
+<a href="https://www.ifarewell.xyz/">Farewell</a> all content copyrights reserved.
+
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script>
+    </body>
+</html>

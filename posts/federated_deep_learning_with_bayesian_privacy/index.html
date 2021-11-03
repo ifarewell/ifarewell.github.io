@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html><head>
+<title>Federated Deep Learning with Bayesian Privacy 阅读笔记</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="记录在组会上分享的一篇文章。">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:title" content="Federated Deep Learning with Bayesian Privacy 阅读笔记" />
+<meta property="og:description" content="记录在组会上分享的一篇文章。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/federated_deep_learning_with_bayesian_privacy/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-10-26T16:00:13&#43;08:00" />
+<meta property="article:modified_time" content="2021-10-26T16:00:13&#43;08:00" /><meta property="og:site_name" content="Farewell&#39;s Blog" />
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Federated Deep Learning with Bayesian Privacy 阅读笔记"/>
+<meta name="twitter:description" content="记录在组会上分享的一篇文章。"/>
+
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [["$", "$"]],
+    },
+    displayMath: [
+      ["$$", "$$"],
+      ["\[\[", "\]\]"],
+    ],
+    svg: {
+      fontCache: "global",
+    },
+  };
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-03MW46RY0Z', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/journal.min.3f72a5fc8f5b5dd732a4b476aced0eece2156958d9d414316494ddb10593ddf7.css" integrity="sha256-P3Kl/I9bXdcypLR2rO0O7OIVaVjZ1BQxZJTdsQWT3fc=" media="screen">
+
+
+
+<link rel="stylesheet" href="/scss/dark-mode.min.c0082f0b082177f6fb3768ff91439a097de49689bd26f4d49f76d94ebb81e02d.css" integrity="sha256-wAgvCwghd/b7N2j/kUOaCX3klom9JvTUn3bZTruB4C0=" media="screen">
+
+
+<script src="/vendor/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+</script>
+
+
+
+
+
+
+  <script src="/js/toc.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: 'f64d20fc41778fa3b385',
+  clientSecret: 'c3affc0d88df550b5cb57c6fa4b5bca6e6b02e43',
+  repo: 'ifarewell.github.io',
+  owner: 'ifarewell',
+  admin: ['ifarewell'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="/">
+    
+        <div class="nav-title">
+            卢肇的博客
+        </div>
+        
+        <div class="nav-subtitle">
+            Farewell&#39;s Blog
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                归档
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                标签
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS Feed
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+
+<a href="https://beian.miit.gov.cn">赣 ICP 备 2021006252 号</a>
+
+<br>
+2021
+&copy;
+
+<a href="https://www.ifarewell.xyz/">Farewell</a> all content copyrights reserved.
+
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%83%8c%e6%99%af" onclick="onNavClick(`#背景-nav`)" id="背景-nav">
+									背景
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%9b%b8%e5%85%b3%e5%b7%a5%e4%bd%9c" onclick="onNavClick(`#相关工作-nav`)" id="相关工作-nav">
+									相关工作
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e9%9a%90%e7%a7%81%e5%ae%9a%e4%b9%89" onclick="onNavClick(`#隐私定义-nav`)" id="隐私定义-nav">
+									隐私定义
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%9a%90%e7%a7%81%e4%bf%9d%e6%8a%a4%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#隐私保护机制-nav`)" id="隐私保护机制-nav">
+									隐私保护机制
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e8%b4%9d%e5%8f%b6%e6%96%af%e9%9a%90%e7%a7%81" onclick="onNavClick(`#贝叶斯隐私-nav`)" id="贝叶斯隐私-nav">
+									贝叶斯隐私
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e9%97%ae%e9%a2%98%e5%81%87%e5%ae%9a" onclick="onNavClick(`#问题假定-nav`)" id="问题假定-nav">
+									问题假定
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%81%94%e9%82%a6%e5%ad%a6%e4%b9%a0%e4%b8%ad%e7%9a%84%e9%9a%90%e7%a7%81%e4%bf%9d%e6%8a%a4%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#联邦学习中的隐私保护机制-nav`)" id="联邦学习中的隐私保护机制-nav">
+									联邦学习中的隐私保护机制
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%81%94%e9%82%a6%e5%ad%a6%e4%b9%a0%e4%b8%ad%e7%9a%84%e9%9a%90%e7%a7%81%e6%94%bb%e5%87%bb%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#联邦学习中的隐私攻击机制-nav`)" id="联邦学习中的隐私攻击机制-nav">
+									联邦学习中的隐私攻击机制
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%b8%a6%e6%9c%89%e5%af%b9%e6%8a%97%e8%bf%87%e7%a8%8b%e7%9a%84%e8%b4%9d%e5%8f%b6%e6%96%af%e9%9a%90%e7%a7%81%e6%a1%86%e6%9e%b6" onclick="onNavClick(`#带有对抗过程的贝叶斯隐私框架-nav`)" id="带有对抗过程的贝叶斯隐私框架-nav">
+									带有对抗过程的贝叶斯隐私框架
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e5%9f%ba%e4%ba%8e%e7%a7%81%e6%9c%89passport%e7%9a%84%e8%81%94%e9%82%a6%e5%ad%a6%e4%b9%a0" onclick="onNavClick(`#基于私有passport的联邦学习-nav`)" id="基于私有passport的联邦学习-nav">
+									基于私有Passport的联邦学习
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%90%86%e8%ae%ba%e5%88%86%e6%9e%90" onclick="onNavClick(`#理论分析-nav`)" id="理论分析-nav">
+									理论分析
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%9e%e9%aa%8c" onclick="onNavClick(`#实验-nav`)" id="实验-nav">
+									实验
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%ae%9e%e9%aa%8c%e6%9d%a1%e4%bb%b6" onclick="onNavClick(`#实验条件-nav`)" id="实验条件-nav">
+									实验条件
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%9e%e9%aa%8c%e7%bb%93%e6%9e%9c" onclick="onNavClick(`#实验结果-nav`)" id="实验结果-nav">
+									实验结果
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%9e%e9%aa%8c%e6%80%a7%e9%aa%8c%e8%af%81" onclick="onNavClick(`#实验性验证-nav`)" id="实验性验证-nav">
+									实验性验证
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%80%bb%e7%bb%93" onclick="onNavClick(`#总结-nav`)" id="总结-nav">
+									总结
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    归档
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    标签
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS Feed
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%83%8c%e6%99%af" onclick="onNavClick(`#背景-nav`)" id="背景-nav">
+									背景
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%9b%b8%e5%85%b3%e5%b7%a5%e4%bd%9c" onclick="onNavClick(`#相关工作-nav`)" id="相关工作-nav">
+									相关工作
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e9%9a%90%e7%a7%81%e5%ae%9a%e4%b9%89" onclick="onNavClick(`#隐私定义-nav`)" id="隐私定义-nav">
+									隐私定义
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%9a%90%e7%a7%81%e4%bf%9d%e6%8a%a4%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#隐私保护机制-nav`)" id="隐私保护机制-nav">
+									隐私保护机制
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e8%b4%9d%e5%8f%b6%e6%96%af%e9%9a%90%e7%a7%81" onclick="onNavClick(`#贝叶斯隐私-nav`)" id="贝叶斯隐私-nav">
+									贝叶斯隐私
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e9%97%ae%e9%a2%98%e5%81%87%e5%ae%9a" onclick="onNavClick(`#问题假定-nav`)" id="问题假定-nav">
+									问题假定
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%81%94%e9%82%a6%e5%ad%a6%e4%b9%a0%e4%b8%ad%e7%9a%84%e9%9a%90%e7%a7%81%e4%bf%9d%e6%8a%a4%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#联邦学习中的隐私保护机制-nav`)" id="联邦学习中的隐私保护机制-nav">
+									联邦学习中的隐私保护机制
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%81%94%e9%82%a6%e5%ad%a6%e4%b9%a0%e4%b8%ad%e7%9a%84%e9%9a%90%e7%a7%81%e6%94%bb%e5%87%bb%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#联邦学习中的隐私攻击机制-nav`)" id="联邦学习中的隐私攻击机制-nav">
+									联邦学习中的隐私攻击机制
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%b8%a6%e6%9c%89%e5%af%b9%e6%8a%97%e8%bf%87%e7%a8%8b%e7%9a%84%e8%b4%9d%e5%8f%b6%e6%96%af%e9%9a%90%e7%a7%81%e6%a1%86%e6%9e%b6" onclick="onNavClick(`#带有对抗过程的贝叶斯隐私框架-nav`)" id="带有对抗过程的贝叶斯隐私框架-nav">
+									带有对抗过程的贝叶斯隐私框架
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e5%9f%ba%e4%ba%8e%e7%a7%81%e6%9c%89passport%e7%9a%84%e8%81%94%e9%82%a6%e5%ad%a6%e4%b9%a0" onclick="onNavClick(`#基于私有passport的联邦学习-nav`)" id="基于私有passport的联邦学习-nav">
+									基于私有Passport的联邦学习
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%90%86%e8%ae%ba%e5%88%86%e6%9e%90" onclick="onNavClick(`#理论分析-nav`)" id="理论分析-nav">
+									理论分析
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%9e%e9%aa%8c" onclick="onNavClick(`#实验-nav`)" id="实验-nav">
+									实验
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%ae%9e%e9%aa%8c%e6%9d%a1%e4%bb%b6" onclick="onNavClick(`#实验条件-nav`)" id="实验条件-nav">
+									实验条件
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%9e%e9%aa%8c%e7%bb%93%e6%9e%9c" onclick="onNavClick(`#实验结果-nav`)" id="实验结果-nav">
+									实验结果
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%9e%e9%aa%8c%e6%80%a7%e9%aa%8c%e8%af%81" onclick="onNavClick(`#实验性验证-nav`)" id="实验性验证-nav">
+									实验性验证
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%80%bb%e7%bb%93" onclick="onNavClick(`#总结-nav`)" id="总结-nav">
+									总结
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="/">
+            卢肇的博客
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">卢肇的博客</div>
+        
+        <div class="single-column-header-subtitle">Farewell&#39;s Blog</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Federated Deep Learning with Bayesian Privacy 阅读笔记
+                    
+                    <div class="post-subtitle">
+                        记录在组会上分享的一篇文章。
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2021-10-26 16:00
+                        </time>
+                        
+
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/%E7%AC%94%E8%AE%B0">笔记</a>
+                                &nbsp;
+                            
+                                <a href="/tags/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0">联邦学习</a>
+                                &nbsp;
+                            
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>前段时间<del> 刷讲座课学分 </del>有幸参加了微众银行（WeBank）的范力欣博士与康焱博士的讲座“联邦学习：目的、方法及应用”，对其中提到的Passport方法感到好奇，因此对相关论文进行了阅读，并在组会上进行了分享。在此对组会上的PPT内容进行整理记录。</p>
+<h1 id="背景">背景</h1>
+<p>联邦学习是一种在保护数据隐私的前提下，通过各方合作训练深度学习模型来充分发挥各方数据的价值的方法。因其在安全且充分利用各方数据资源方面的作用而受到广泛关注。</p>
+<p>但是，面对包含大量参数的深度学习模型，当前联邦学习中运用的隐私保护方案存在各种问题。</p>
+<ul>
+<li>模型准确率低</li>
+<li>隐私保护性不高</li>
+<li>模型收敛速度慢，计算、通信开销大</li>
+</ul>
+<p>这三个方向的问题，实际上构成了联邦学习中的一组不可能三角，即单一隐私保护方案难以在三方面都有完美表现。</p>
+<center>
+<p><img src="/images/Privacy-Efficiency-Utility%20Trilemma.png" alt="Privacy-Efficiency-Utility Trilemma" title="Privacy-Efficiency-Utility Trilemma"></p>
+</center>
+<p>在这种背景下，作者希望寻求一种能够在三方面都有不错表现的隐私保护方案。</p>
+<h1 id="相关工作">相关工作</h1>
+<p>本文从三个方面对相关工作进行了总结归纳，包括隐私定义、隐私保护机制与隐私泄露攻击，其中对前两个方面的总结归纳比较到位。</p>
+<h2 id="隐私定义">隐私定义</h2>
+<ul>
+<li>
+<p>$(\epsilon,\delta)-$差分隐私(Differential Privacy):</p>
+<p>$\qquad$一个算法被认为满足$(\epsilon,\delta)-$差分隐私，当且仅当对于两个相距为1的数据集$S,S^\prime$，对于任意的输出集合$E$，应该有</p>
+<p>$$\mathbb{P}(M(S)\in E)\leq e^\epsilon\mathbb{P}(M(S^\prime)\in E)+\delta.$$</p>
+<p>这种隐私性定义方式提出较久，且较为严密，被较为广泛地接受,有较多基于该方式的后续工作。</p>
+</li>
+<li>
+<p>贝叶斯隐私(Baysian Privacy):</p>
+<p>$\qquad$贝叶斯隐私计算攻击者对数据的先验分布与其通过暴露的公开信息恢复出的数据后验分布之间的KL散度(Kullback-Leibler divergence)，分析两分布之间的差异，以衡量隐私数据的泄露程度。</p>
+</li>
+</ul>
+<h2 id="隐私保护机制">隐私保护机制</h2>
+<ul>
+<li>
+<p>基于随机加噪的保护机制</p>
+<p>$\qquad$通过随机噪声的引入对交换的数据进行扰动，以达到保护隐私数据的目的。运算较为简单，受到较大关注，但不可避免地带来模型训练收敛速度较慢、最终模型准确率不高以及隐私保护能力不强等问题。</p>
+</li>
+<li>
+<p>基于同态加密的保护机制</p>
+<p>$\qquad$通过算法设计，使得基于密文的计算在解密后的结果与直接基于明文的计算结果相同。能够很好地保证安全性，但计算和通信开销较高。</p>
+<center>
+<p><img src="/images/Homomorphic%20Encryption.jpg" alt="Homomorphic Encryption" title="Homomorphic Encryption"></p>
+</center>
+</li>
+<li>
+<p>基于拆分学习的保护机制</p>
+<p>$\qquad$将模型拆分为公有部分和私有部分。中心服务器只对公有模型部分进行参数的聚合与分发，通过对于私有模型的隐藏来保证安全性。但实验表明，进攻者仍然可以通过参与方暴露给中心服务器的数据来推断出私有模型数据。</p>
+<center>
+<p><img src="/images/Split%20Learning.png" alt="Split Learning" title="Split Learning"></p>
+</center>
+</li>
+<li>
+<p>基于Passport层的保护机制</p>
+<p>$\qquad$对一个卷积层嵌入passport的方法如图。正常的卷积操作只有左边部分。而嵌入passport后，事先设定的参数$p_γ^l、p_β^l$同样经过卷积层，再经过编码器、解码器池化层之后分别得到参数γ、β用于对正常输出进行伸缩和偏移变换。</p>
+<center>
+<p><img src="/images/Passport%20Layer.png" alt="Passport Layer" title="Passport Layer"></p>
+</center>
+<p>$\qquad$该方法实际上不是作为一个隐私保护方案被提出的，而是为了调节模型输出，以达到验证模型所有权及知识产权的目的。根据<a href="https://proceedings.neurips.cc/paper/2019/file/75455e062929d32a333868084286bb68-Paper.pdf">前作</a>的解释，passport层的引入是为了给伸缩参数γ、偏移参数β与网络的权重之间引入相关性，使得当输入非法passport时，模型的结果将产生较大偏差。这里参数$p_γ^l、p_β^l$的作用类似于密码学中的私钥。</p>
+</li>
+</ul>
+<h1 id="贝叶斯隐私">贝叶斯隐私</h1>
+<p><strong>本文基于贝叶斯隐私框架对隐私保护与攻击两类对抗策略进行了较为深入的形式化分析，这也是本文在写作上比较值得借鉴的地方。</strong></p>
+<h2 id="问题假定">问题假定</h2>
+<ul>
+<li>多组织通过横向联邦学习共同进行模型训练DNN模型。</li>
+<li>某些参与方（或中央服务器）是半诚实的，即不会提交错误数据或恶意执行错误计算，但可能利用联邦学习过程中交换的信息对其他参与方进行隐私攻击。</li>
+<li>单个参与方拥有隐私数据 $x$，并会暴露公共数据 $G$，此处 $G$ 与 $x$ 相关，满足映射 $G=g(x)$。需要注意的是，在联邦学习中，映射 $g()$ 被所有参与方知晓，因为其训练的模型结构是相同的。但隐私数据 $x$ 仅被参与方自身了解。</li>
+<li>分类任务中 G的计算通过最小化损失函数来完成。</li>
+<li>半诚实参与方会试图通过最小化 $|g(\widetilde x)-G|$，以达到用 $\widetilde x$ 来估计 $x$ 的目的。</li>
+</ul>
+<p>在上述问题假定下，存在两方相互对抗的机制。即隐私数据保护机制 $M$ 与隐私攻击机制 $A$。</p>
+<h2 id="联邦学习中的隐私保护机制">联邦学习中的隐私保护机制</h2>
+<p>本文将该情境下隐私保护机制定义为映射</p>
+<p>$$\widetilde{G}=M(G),$$</p>
+<p>将参与方暴露的公共信息 $G$ 作为输入，输出一个修改过的公共信息 $G$。具体修改方式与隐私保护机制相关：</p>
+<ul>
+<li>基于随机噪声的保护机制:
+$$\widetilde{G}=Rand_\epsilon(G)=G+\epsilon$$</li>
+<li>基于引入稀疏性的保护机制：
+$$\widetilde{G}=Spar_{s,t}(G)$$</li>
+<li>基于调整的保护机制：
+$$\widetilde{G}=Mod_P(G)=\mathop{\arg\min}_{G}(L_{CE}(G,x)+L_P(G,P))$$</li>
+<li>基于同态加密的保护机制：
+$$\widetilde{G}=Enc(G)$$</li>
+</ul>
+<p>值得注意的是，这些隐私保护机制可以进行组合，以提供更高的隐私保护能力。本文中的方法就是对基于引入稀疏性的split learning和基于调整的passport layer方法进行有机结合，最终达到较为满意的效果。</p>
+<h2 id="联邦学习中的隐私攻击机制">联邦学习中的隐私攻击机制</h2>
+<p>本文将该情境下隐私保护机制定义为映射
+$$\widetilde{x}^*=A(\widetilde{G}):=\mathop{\arg\min}_{\widetilde{x}}L(g(\widetilde{x}),\widetilde{G}),$$
+而基于贝叶斯框架，攻击者根据公开信息来还原数据可表示为
+$$P(\widetilde{x}|\widetilde{G})=\frac{P(\widetilde{G}|\widetilde{x})P(\widetilde{x})}{P(\widetilde{G})}\propto P(\widetilde{G}|\widetilde{x})P(\widetilde{x}),$$
+因此，攻击者获得最优恢复数据的过程可表达为</p>
+<p>$$
+\begin{aligned}
+\widetilde{x}^*
+&amp;=A(\widetilde{G})=\mathop{\arg\max}_{\widetilde{x}}log(P(\widetilde{x}|\widetilde{G}))\\<br>
+&amp;=\mathop{\arg\min}_{\widetilde{x}}[-log(P(\widetilde{G}|\widetilde{x}))-log(P(\widetilde{x}))]\\<br>
+&amp;\triangleq\mathop{\arg\min}_{\widetilde{x}}[L_1(g(\widetilde{x}),\widetilde{G})+L_2(\widetilde{x})],
+\end{aligned}
+$$</p>
+<p>其中，$L_2=-log(P(\widetilde{x}))$ 是在为引入引入先验，例如图像的平滑性带来的先验。而 $L_1=-log(P(\widetilde{G}|\widetilde{x}))$ 则又是根据不同的攻击方式具有不同的具体形式：</p>
+<ul>
+<li>模型逆向攻击：
+$$L_1(g(\widetilde{x}),\widetilde{G})=||\widetilde{O}-O||^2.$$</li>
+<li>基于梯度的攻击：
+$$L_1(g(\widetilde{x}),\widetilde{G})=||\nabla W(\widetilde{O})-\nabla W(O)||^2.$$</li>
+</ul>
+<p>从攻击者角度，私有数据的重建实际上是对于私有数据知识的增加。</p>
+<h2 id="带有对抗过程的贝叶斯隐私框架">带有对抗过程的贝叶斯隐私框架</h2>
+<p>给定隐私保护机制 $M$，隐私泄露攻击 $A$，攻击者对于私有数据 $x$ 的先验分布 $F_0$，本文将贝叶斯隐私定义为
+$$BP(M,A,g,F_0)=KL(F_0||F_A(\widetilde{x}|M(g(X))))$$</p>
+<p>同时，针对攻击者对隐私数据的先验$F_0$的质量，作者进行了分类讨论：</p>
+<ul>
+<li>攻击者对私有数据几乎没有先验知识，先验接近均匀分布，即$F_0=\bar F$，此时攻击者希望复原的数据能够更贴近真实数据而非随机猜测，因此想要更高的KL散度以获得更高的知识增量；而防御者希望KL散度越低越好，以保证隐私数据的信息不被过多泄露。因此，双方之间的对抗体现为</li>
+</ul>
+<p>$$
+\mathop{max}_{A}\mathop{min}_{M}BP(M,A,g,\bar{F}).
+$$</p>
+<ul>
+<li>攻击者已经大致了解私有数据的分布情况，先验分布约等于真实分布，即$F_0\approx F^*$。此时，攻击者希望复原的数据尽量服从该分布，因此想要尽量减小KL散度；而防御者则希望增大KL散度来误导攻击者。因此，双方之间的对抗体现为</li>
+</ul>
+<p>$$
+\mathop{min}_{A}\mathop{max}_{M}BP(M,A,g,F^*).
+$$</p>
+<p>需要注意的是，此处的攻击与防御措施分别由攻击者与防御者双方来进行，提出的Bayesian privacy框架仅仅是为了更好对两个过程进行综合分析。</p>
+<h1 id="基于私有passport的联邦学习">基于私有Passport的联邦学习</h1>
+<p>作者综合前述分析，结合了拆分学习与Passport层，提出了基于私有Passport的联邦学习，具体架构如下。</p>
+<center>
+<p><img src="/images/Federated%20Deep%20Learning%20with%20Private%20Passport.png" alt="Federated Deep Learning with Private Passport" title="Federated Deep Learning with Private Passport
+"></p>
+</center>
+<p>该框架实际上是对split learning和passport layer的结合。
+每个client的本地模型分为public和private两部分，只有public部分的模型会参与中心服务器的聚合与分发（如图片左半边所示）。Private模型仅在本地更新。而在private部分的模型中，又嵌入passport层，以进一步保护本地隐私数据的安全性（如图片右半边所示）。</p>
+<p>个人理解Passport层的作用是为不同参与方的模型输入分布进行扰动，使得不同参与方所训练的模型存在差异性，因而难以被恶意参与方攻击。</p>
+<center>
+<p><img src="/images/FDL-PP%20algorithm.png" alt="Federated"></p>
+</center>
+整体框架的伪代码如图，看起来很长，实际上比较易于理解。分为三个部分：
+<ul>
+<li>
+<p>训练主体部分1-9，中央服务器分发public模型参数，各客户端获取参数，分别进行本地训练，对public模型权重进行更新并回传给服务器，服务器随后对模型权重进行聚合。</p>
+</li>
+<li>
+<p>client本地训练部分10-16，客户端正常训练，获得loss信息，对public部分进行权重更新。</p>
+</li>
+<li>
+<p>Client本地私有训练部分17-23，冻结public模型的参数，仅根据本地计算的loss对private模型参数进行更新。</p>
+</li>
+</ul>
+<h1 id="理论分析">理论分析</h1>
+<p>理论证明过程较为冗长，主要通过证明两个关键命题来表明上述两个方法结合的必要性：</p>
+<ul>
+<li><strong>在拆分学习中，即便private部分的模型没有被暴露，攻击者依然能够较为容易地复原隐私数据</strong>。命题最终给出了贝叶斯隐私的上界：
+$$
+\begin{aligned}
+\sqrt{BP_{MSE}(x,\widetilde{x})}
+&amp;=||\widetilde{x}-x||_2\\<br>
+&amp;=||W^+\cdot O_1-\widetilde{W}^+\cdot O_2||_2\\<br>
+&amp;\leq C_1||\widetilde{W}^+||2||W^+||_2||W-\widetilde{W}||_2
+\end{aligned}
+$$</li>
+</ul>
+<p>由该上界表达式可见，在攻击者与隐私数据拥有者之间的获得的权重十分接近的前提下，攻击者能够有效重建隐私数据。<strong>作者对此提出一个假定：在没有passport层的情况下，不同参与方之间的private模型通常会学到较为相近的权重。</strong> 在该假定为真的情况下，我们根据前述上界知道，攻击者确实能够较为容易地复原隐私数据。</p>
+<ul>
+<li><strong>嵌入passport层能够有效防止隐私数据被复原</strong>。命题最终给出了贝叶斯隐私的下界：
+$$
+\begin{aligned}
+BP_{MSE}(x,\widetilde{x})
+&amp;=||\widetilde{x}-x||_2\\<br>
+&amp;=||W^+\cdot O_1-\widetilde{W}^+\cdot O_2||_2\\<br>
+&amp;\geq \frac{1}{||\widetilde{W}-W||_2}\\<br>
+&amp;\geq \frac{1}{||\widetilde{W}||_2+||W||_2}\\<br>
+&amp;=\frac{1}{||\widetilde{D}_\gamma\cdot\widetilde{w}||_2+||D_\gamma\cdot w||_2}\\<br>
+&amp;\geq \frac{1}{||\widetilde{D}_\gamma||_2||\widetilde{w}||_2+||D_\gamma||_2||w||_2}\\<br>
+&amp;\geq \frac{C_2}{||D_\gamma||_2+||\widetilde{D}_\gamma||_2}
+\end{aligned}
+$$</li>
+</ul>
+<p><strong>作者对该命题又提出两个假定：嵌入passport会使得该下界的分母减小，且会使得模型整体的秩降低。</strong> 若这两个假定均为真，则passport层的确可以提高贝叶斯隐私的下界，即提高了整体的隐私保护能力。</p>
+<p><strong>在上述两个关键命题的证明过程中，作者利用了三个难以通过理论论证直接证明的假定，在之后的工作中，通过专门设计的实验来对这三个假定进行实践的检验。这种方法在日后的论文写作过程中也十分值得借鉴。</strong></p>
+<h1 id="实验">实验</h1>
+<p>本文中，作者通过实验比较了所提出方法与各传统方法的效果，验证了所提出方法的优越性。</p>
+<h2 id="实验条件">实验条件</h2>
+<ul>
+<li>实验数据集：MNIST, CIFAR10， CIFAR100</li>
+<li>实验网络：Lenet，Alexnet，Resnet-18</li>
+<li>对照算法：不加隐私保护的分布式学习(DL)、带差分隐私的联邦学习(DLDP-A、DLDP-B)、拆分学习(SplitFed)。</li>
+<li>FDL-PP设定：第一个卷积层和激活函数设为private，后续层数设为public。在private层之后嵌入passport层。</li>
+<li>攻击算法：基于梯度的攻击、模型逆向攻击。</li>
+<li>评价标准：
+<ul>
+<li>模型效果：准确率</li>
+<li>训练复杂性：训练时间</li>
+<li>隐私保护能力：基于前述贝叶斯隐框架的隐私评估</li>
+</ul>
+</li>
+</ul>
+<p>注：此处DLDP-A、DLDP-B分别对应$\sigma=0.002$与$\sigma=0.128$的高斯噪声。且在实验中，基于贝叶斯隐私框架的评估被退化为基于MSE loss的评估体系。</p>
+<h2 id="实验结果">实验结果</h2>
+<p>作者首先展示了对于两张图片的攻击结果。其中，对于同一张图片，上面一行为基于梯度攻击的结果，下一行为模型逆向攻击的结果。除了直观感受复原前后的图片差距，图片下方还给出了攻击得到的图片与原图片的 MSE loss，便于从数值上体会具体差异大小。</p>
+<center>
+<p><img src="/images/result1.png" alt="result1" title="result1"></p>
+</center>
+从图中可以看到，本文提出的FDL-PP方法的隐私保护效果无疑是极好的。此外，作者还强调了差分隐私理论给出的隐私条件过于松散。图中可以看出，DLDP-A几乎难以起到保护作用，且数值上也体现出其保护性能的低下（而根据差分隐私的理论，加上$\sigma=0.002$的高斯噪声后，应该能够达到 $(15.8,10^{-5})$ 的保护效果）。
+<p>作者接着在下图中给出了各种方式在前述三个数据集以及两种攻击方式下的表现对比。图中横坐标是最终模型的准确率，纵坐标是隐私保护能力。</p>
+<center>
+<p><img src="/images/result2.png" alt="result2" title="result2"></p>
+</center>
+<p>我们能很直观地感受到，FDL-PP方法在模型准确率与隐私保护性能两方面均占上风。</p>
+<p>作者还给出了各种隐私保护方式在各条件下的详细数据表格，如下所示。</p>
+<center>
+<p><img src="/images/result3.png" alt="result3" title="result3"></p>
+</center>
+<p>可以发现，相对于除同态加密之外的算法，FDL-PP的训练速度并没有优势，但也在可用的范围内。而基于同态加密的算法其所需训练复杂度有些难以接受。</p>
+<p>综合上述实验结果，我们可以得出结论，在可用的训练复杂度范围内，FDL-PP方法在模型准确率与隐私保护性能上相对其他方式有明显优势，因此，确实是一种有效的改进方法。</p>
+<h2 id="实验性验证">实验性验证</h2>
+<p>还记得在理论分析部分中，作者用到了三个假定来支持其结论，而这三个假定难以通过理论分析进行论证。因此，作者为三个假定分别设计了验证性的实验，结果如下：</p>
+<ul>
+<li>假定一：没有passport层时，不同参与方之间的private模型通常会学习到较为相近的权重。</li>
+</ul>
+<center>
+<p><img src="/images/assumption1.png" alt="assumption1" title="assumption1"></p>
+</center>
+<ul>
+<li>假定二：嵌入passport会使得scaling factor减小。</li>
+</ul>
+<center>
+<p><img src="/images/assumption2.png" alt="assumption2" title="assumption2"></p>
+</center>
+<ul>
+<li>假定三：嵌入passport会使得参数的秩降低。</li>
+</ul>
+<center>
+<p><img src="/images/assumption3.png" alt="assumption3" title="assumption3"></p>
+</center>
+<h1 id="总结">总结</h1>
+<p>本文主要算法FDL-PP是对split learning与前作中提出的passport方法的结合，方法上并不是从0到1的创新，但实际效果确实较为优秀。</p>
+<p>本文对于隐私保护能力的评估体系Bayesian Privacy看似复杂、高大上，但只停留在理论阶段，到最后经过层层简化，也不过是对还原出的图像与原图计算一个MSE loss，说明成熟且实用的隐私保护能力评估体系设计确实有难度。因此差分隐私体系受到追捧也不是没有道理的，其自成体系的逻辑可以为相关的分析带来许多便利，并且能够使得理论为大家所接受。</p>
+<p>文章对于隐私保护方式、攻击方式以及隐私保护评估体系的形式化做得较好，值得学习借鉴。</p>
+<p>文章的理论推导过程中用到一些经验性的结论难以通过推导直接得出，因此转而对这些结论进行实验性的检验与说明，这样的做法也很值得借鉴。</p>
+<p>总的来说，无论是从研究上还是写作上，本文都是一篇很有价值的文章，值得学习借鉴。在组会上进行分享时，本文也引起了老师与同学的广泛讨论，促进了实验室成员相互之间的深度交流。这也是本人在组会上分享文章时第一次获得大家如此热烈的反响，体验极佳🥰🥰，也让本人深刻体会到阅读与分享好文章所带来的收获感与成就感。</p>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2021-10-26</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+			Next<br>No newer posts.
+                </a>
+                
+                
+                
+                <a class="older-posts" href="/posts/maintain/">
+			Previous<br>博客维护方式
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+
+<a href="https://beian.miit.gov.cn">赣 ICP 备 2021006252 号</a>
+
+<br>
+2021
+&copy;
+
+<a href="https://www.ifarewell.xyz/">Farewell</a> all content copyrights reserved.
+
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script>
+    </body>
+</html>
