@@ -65,21 +65,35 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+crossorigin="anonymous"
+/>
 
 
   
 
 
 
+<link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+<link rel="canonical" href="/posts/federated_deep_learning_with_bayesian_privacy/" />
 
 
 
-<link rel="stylesheet" href="/scss/journal.min.3f72a5fc8f5b5dd732a4b476aced0eece2156958d9d414316494ddb10593ddf7.css" integrity="sha256-P3Kl/I9bXdcypLR2rO0O7OIVaVjZ1BQxZJTdsQWT3fc=" media="screen">
+
+<link type="text/css" rel="stylesheet" href="/css/journal.min.d5e41931817228c3e71f1101bfc2a6b41e207ef82ca15318f4e322a7947a333c.css" integrity="sha256-1eQZMYFyKMPnHxEBv8KmtB4gfvgsoVMY9OMip5R6Mzw=" media="screen">
 
 
 
-<link rel="stylesheet" href="/scss/dark-mode.min.c0082f0b082177f6fb3768ff91439a097de49689bd26f4d49f76d94ebb81e02d.css" integrity="sha256-wAgvCwghd/b7N2j/kUOaCX3klom9JvTUn3bZTruB4C0=" media="screen">
+<link type="text/css" rel="stylesheet" href="/css/dark-mode.min.f92ef093d19f25eee9557f701029147cd5c284c9cebcf949290f4ff5cbf9b3db.css" integrity="sha256-&#43;S7wk9GfJe7pVX9wECkUfNXChMnOvPlJKQ9P9cv5s9s=" media="screen">
 
 
 <script src="/vendor/js/loadCSS.js"></script>
@@ -90,9 +104,7 @@ if (!doNotTrack) {
 
 
 
-
-
-  <script src="/js/toc.js"></script>
+  <script type="text/javascript" src="/js/toc.min.1017797fd0eb94df95241561b8be375807dfaeb9b4f342bd9e8d5942b7803375.js" integrity="sha256-EBd5f9DrlN&#43;VJBVhuL43WAffrrm080K9no1ZQreAM3U=" crossorigin="anonymous"></script>
 
 
 
@@ -150,13 +162,11 @@ if (!doNotTrack) {
                 
             
             
-            
             <a class="a-block nav-link-item active" href="/posts">
                 归档
             </a>
             
-        
-            
+    
             
             
             
@@ -165,36 +175,62 @@ if (!doNotTrack) {
                 标签
             </a>
             
-        
+    
             
             
             
             
-            
-            <a class="a-block nav-link-item false" href="/index.xml">
-                RSS Feed
+            <a class="a-block nav-link-item false" href="/about.md">
+                关于
             </a>
             
-        
+    
     </div>
 
+    <div class="nav-social-list">
+        
+        <a class="nav-social-item " href="https://github.com/ifarewell/" rel="me" aria-label="github" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
     
+        <a class="nav-social-item " href="https://weibo.com/u/5841729283" rel="me" aria-label="weibo" target="_blank">
+            <i class="fab fa-weibo"></i>
+        </a>
+    
+        <a class="nav-social-item " href="https://steamcommunity.com/profiles/76561198804857866" rel="me" aria-label="steam" target="_blank">
+            <i class="fab fa-steam"></i>
+        </a>
+    
+        <a class="nav-social-item " href="https://www.instagram.com/ifarewelli/" rel="me" aria-label="instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+    
+        <a class="nav-social-item " href="mailto:ifarewell@qq.com" rel="me" aria-label="e-mail" target="_blank">
+            <i class="fas fa-envelope"></i>
+        </a>
+    
+        <a class="nav-social-item " href="/index.xml" rel="me" aria-label="RSS" target="_blank">
+            <i class="fas fa-rss"></i>
+        </a>
+    
+    </div>
 
     <div class="nav-footer">
         
 Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
 <br>
-Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
 <br>
 
 
 <a href="https://beian.miit.gov.cn">赣 ICP 备 2021006252 号</a>
 
 <br>
-2021
-&copy;
 
-<a href="https://www.ifarewell.xyz/">Farewell</a> all content copyrights reserved.
+&copy;
+2021
+
+<a href="https://www.ifarewell.xyz/">Farewell</a> All content copyrights reserved.
 
 
     </div>
@@ -210,7 +246,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 		
 		
 		
-		<center>- CATALOG -</center>
+		<center>- 目录 -</center>
 		
 		
 		<ul>
@@ -224,7 +260,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e8%83%8c%e6%99%af" onclick="onNavClick(`#背景-nav`)" id="背景-nav">
+								<a  onclick="onNavClick(`#背景`)" id="背景-nav">
 									背景
 								</a>
 							</li>
@@ -242,7 +278,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e7%9b%b8%e5%85%b3%e5%b7%a5%e4%bd%9c" onclick="onNavClick(`#相关工作-nav`)" id="相关工作-nav">
+								<a  onclick="onNavClick(`#相关工作`)" id="相关工作-nav">
 									相关工作
 								</a>
 							</li>
@@ -260,13 +296,13 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 							
 								
-									<ul>
+									<ul class="collapse" data-toggle="collapse">
 								
 							
 						
 						
 							<li>
-								<a href="#%e9%9a%90%e7%a7%81%e5%ae%9a%e4%b9%89" onclick="onNavClick(`#隐私定义-nav`)" id="隐私定义-nav">
+								<a  onclick="onNavClick(`#隐私定义`)" id="隐私定义-nav">
 									隐私定义
 								</a>
 							</li>
@@ -284,7 +320,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e9%9a%90%e7%a7%81%e4%bf%9d%e6%8a%a4%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#隐私保护机制-nav`)" id="隐私保护机制-nav">
+								<a  onclick="onNavClick(`#隐私保护机制`)" id="隐私保护机制-nav">
 									隐私保护机制
 								</a>
 							</li>
@@ -306,7 +342,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e8%b4%9d%e5%8f%b6%e6%96%af%e9%9a%90%e7%a7%81" onclick="onNavClick(`#贝叶斯隐私-nav`)" id="贝叶斯隐私-nav">
+								<a  onclick="onNavClick(`#贝叶斯隐私`)" id="贝叶斯隐私-nav">
 									贝叶斯隐私
 								</a>
 							</li>
@@ -324,13 +360,13 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 							
 								
-									<ul>
+									<ul class="collapse" data-toggle="collapse">
 								
 							
 						
 						
 							<li>
-								<a href="#%e9%97%ae%e9%a2%98%e5%81%87%e5%ae%9a" onclick="onNavClick(`#问题假定-nav`)" id="问题假定-nav">
+								<a  onclick="onNavClick(`#问题假定`)" id="问题假定-nav">
 									问题假定
 								</a>
 							</li>
@@ -348,7 +384,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e8%81%94%e9%82%a6%e5%ad%a6%e4%b9%a0%e4%b8%ad%e7%9a%84%e9%9a%90%e7%a7%81%e4%bf%9d%e6%8a%a4%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#联邦学习中的隐私保护机制-nav`)" id="联邦学习中的隐私保护机制-nav">
+								<a  onclick="onNavClick(`#联邦学习中的隐私保护机制`)" id="联邦学习中的隐私保护机制-nav">
 									联邦学习中的隐私保护机制
 								</a>
 							</li>
@@ -366,7 +402,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e8%81%94%e9%82%a6%e5%ad%a6%e4%b9%a0%e4%b8%ad%e7%9a%84%e9%9a%90%e7%a7%81%e6%94%bb%e5%87%bb%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#联邦学习中的隐私攻击机制-nav`)" id="联邦学习中的隐私攻击机制-nav">
+								<a  onclick="onNavClick(`#联邦学习中的隐私攻击机制`)" id="联邦学习中的隐私攻击机制-nav">
 									联邦学习中的隐私攻击机制
 								</a>
 							</li>
@@ -384,7 +420,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e5%b8%a6%e6%9c%89%e5%af%b9%e6%8a%97%e8%bf%87%e7%a8%8b%e7%9a%84%e8%b4%9d%e5%8f%b6%e6%96%af%e9%9a%90%e7%a7%81%e6%a1%86%e6%9e%b6" onclick="onNavClick(`#带有对抗过程的贝叶斯隐私框架-nav`)" id="带有对抗过程的贝叶斯隐私框架-nav">
+								<a  onclick="onNavClick(`#带有对抗过程的贝叶斯隐私框架`)" id="带有对抗过程的贝叶斯隐私框架-nav">
 									带有对抗过程的贝叶斯隐私框架
 								</a>
 							</li>
@@ -406,7 +442,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e5%9f%ba%e4%ba%8e%e7%a7%81%e6%9c%89passport%e7%9a%84%e8%81%94%e9%82%a6%e5%ad%a6%e4%b9%a0" onclick="onNavClick(`#基于私有passport的联邦学习-nav`)" id="基于私有passport的联邦学习-nav">
+								<a  onclick="onNavClick(`#基于私有passport的联邦学习`)" id="基于私有passport的联邦学习-nav">
 									基于私有Passport的联邦学习
 								</a>
 							</li>
@@ -424,7 +460,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e7%90%86%e8%ae%ba%e5%88%86%e6%9e%90" onclick="onNavClick(`#理论分析-nav`)" id="理论分析-nav">
+								<a  onclick="onNavClick(`#理论分析`)" id="理论分析-nav">
 									理论分析
 								</a>
 							</li>
@@ -442,7 +478,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e5%ae%9e%e9%aa%8c" onclick="onNavClick(`#实验-nav`)" id="实验-nav">
+								<a  onclick="onNavClick(`#实验`)" id="实验-nav">
 									实验
 								</a>
 							</li>
@@ -460,13 +496,13 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 							
 								
-									<ul>
+									<ul class="collapse" data-toggle="collapse">
 								
 							
 						
 						
 							<li>
-								<a href="#%e5%ae%9e%e9%aa%8c%e6%9d%a1%e4%bb%b6" onclick="onNavClick(`#实验条件-nav`)" id="实验条件-nav">
+								<a  onclick="onNavClick(`#实验条件`)" id="实验条件-nav">
 									实验条件
 								</a>
 							</li>
@@ -484,7 +520,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e5%ae%9e%e9%aa%8c%e7%bb%93%e6%9e%9c" onclick="onNavClick(`#实验结果-nav`)" id="实验结果-nav">
+								<a  onclick="onNavClick(`#实验结果`)" id="实验结果-nav">
 									实验结果
 								</a>
 							</li>
@@ -502,7 +538,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e5%ae%9e%e9%aa%8c%e6%80%a7%e9%aa%8c%e8%af%81" onclick="onNavClick(`#实验性验证-nav`)" id="实验性验证-nav">
+								<a  onclick="onNavClick(`#实验性验证`)" id="实验性验证-nav">
 									实验性验证
 								</a>
 							</li>
@@ -524,7 +560,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e6%80%bb%e7%bb%93" onclick="onNavClick(`#总结-nav`)" id="总结-nav">
+								<a  onclick="onNavClick(`#总结`)" id="总结-nav">
 									总结
 								</a>
 							</li>
@@ -588,8 +624,8 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
                 
                 
-                <a class="a-block drawer-menu-item false" href="/index.xml">
-                    RSS Feed
+                <a class="a-block drawer-menu-item false" href="/about.md">
+                    关于
                 </a>
                 
             
@@ -602,7 +638,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 		
 		
 		
-		<center>- CATALOG -</center>
+		<center>- 目录 -</center>
 		
 		
 		<ul>
@@ -616,7 +652,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e8%83%8c%e6%99%af" onclick="onNavClick(`#背景-nav`)" id="背景-nav">
+								<a  onclick="onNavClick(`#背景`)" id="背景-nav">
 									背景
 								</a>
 							</li>
@@ -634,7 +670,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e7%9b%b8%e5%85%b3%e5%b7%a5%e4%bd%9c" onclick="onNavClick(`#相关工作-nav`)" id="相关工作-nav">
+								<a  onclick="onNavClick(`#相关工作`)" id="相关工作-nav">
 									相关工作
 								</a>
 							</li>
@@ -652,13 +688,13 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 							
 								
-									<ul>
+									<ul class="collapse" data-toggle="collapse">
 								
 							
 						
 						
 							<li>
-								<a href="#%e9%9a%90%e7%a7%81%e5%ae%9a%e4%b9%89" onclick="onNavClick(`#隐私定义-nav`)" id="隐私定义-nav">
+								<a  onclick="onNavClick(`#隐私定义`)" id="隐私定义-nav">
 									隐私定义
 								</a>
 							</li>
@@ -676,7 +712,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e9%9a%90%e7%a7%81%e4%bf%9d%e6%8a%a4%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#隐私保护机制-nav`)" id="隐私保护机制-nav">
+								<a  onclick="onNavClick(`#隐私保护机制`)" id="隐私保护机制-nav">
 									隐私保护机制
 								</a>
 							</li>
@@ -698,7 +734,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e8%b4%9d%e5%8f%b6%e6%96%af%e9%9a%90%e7%a7%81" onclick="onNavClick(`#贝叶斯隐私-nav`)" id="贝叶斯隐私-nav">
+								<a  onclick="onNavClick(`#贝叶斯隐私`)" id="贝叶斯隐私-nav">
 									贝叶斯隐私
 								</a>
 							</li>
@@ -716,13 +752,13 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 							
 								
-									<ul>
+									<ul class="collapse" data-toggle="collapse">
 								
 							
 						
 						
 							<li>
-								<a href="#%e9%97%ae%e9%a2%98%e5%81%87%e5%ae%9a" onclick="onNavClick(`#问题假定-nav`)" id="问题假定-nav">
+								<a  onclick="onNavClick(`#问题假定`)" id="问题假定-nav">
 									问题假定
 								</a>
 							</li>
@@ -740,7 +776,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e8%81%94%e9%82%a6%e5%ad%a6%e4%b9%a0%e4%b8%ad%e7%9a%84%e9%9a%90%e7%a7%81%e4%bf%9d%e6%8a%a4%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#联邦学习中的隐私保护机制-nav`)" id="联邦学习中的隐私保护机制-nav">
+								<a  onclick="onNavClick(`#联邦学习中的隐私保护机制`)" id="联邦学习中的隐私保护机制-nav">
 									联邦学习中的隐私保护机制
 								</a>
 							</li>
@@ -758,7 +794,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e8%81%94%e9%82%a6%e5%ad%a6%e4%b9%a0%e4%b8%ad%e7%9a%84%e9%9a%90%e7%a7%81%e6%94%bb%e5%87%bb%e6%9c%ba%e5%88%b6" onclick="onNavClick(`#联邦学习中的隐私攻击机制-nav`)" id="联邦学习中的隐私攻击机制-nav">
+								<a  onclick="onNavClick(`#联邦学习中的隐私攻击机制`)" id="联邦学习中的隐私攻击机制-nav">
 									联邦学习中的隐私攻击机制
 								</a>
 							</li>
@@ -776,7 +812,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e5%b8%a6%e6%9c%89%e5%af%b9%e6%8a%97%e8%bf%87%e7%a8%8b%e7%9a%84%e8%b4%9d%e5%8f%b6%e6%96%af%e9%9a%90%e7%a7%81%e6%a1%86%e6%9e%b6" onclick="onNavClick(`#带有对抗过程的贝叶斯隐私框架-nav`)" id="带有对抗过程的贝叶斯隐私框架-nav">
+								<a  onclick="onNavClick(`#带有对抗过程的贝叶斯隐私框架`)" id="带有对抗过程的贝叶斯隐私框架-nav">
 									带有对抗过程的贝叶斯隐私框架
 								</a>
 							</li>
@@ -798,7 +834,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e5%9f%ba%e4%ba%8e%e7%a7%81%e6%9c%89passport%e7%9a%84%e8%81%94%e9%82%a6%e5%ad%a6%e4%b9%a0" onclick="onNavClick(`#基于私有passport的联邦学习-nav`)" id="基于私有passport的联邦学习-nav">
+								<a  onclick="onNavClick(`#基于私有passport的联邦学习`)" id="基于私有passport的联邦学习-nav">
 									基于私有Passport的联邦学习
 								</a>
 							</li>
@@ -816,7 +852,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e7%90%86%e8%ae%ba%e5%88%86%e6%9e%90" onclick="onNavClick(`#理论分析-nav`)" id="理论分析-nav">
+								<a  onclick="onNavClick(`#理论分析`)" id="理论分析-nav">
 									理论分析
 								</a>
 							</li>
@@ -834,7 +870,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e5%ae%9e%e9%aa%8c" onclick="onNavClick(`#实验-nav`)" id="实验-nav">
+								<a  onclick="onNavClick(`#实验`)" id="实验-nav">
 									实验
 								</a>
 							</li>
@@ -852,13 +888,13 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 							
 								
-									<ul>
+									<ul class="collapse" data-toggle="collapse">
 								
 							
 						
 						
 							<li>
-								<a href="#%e5%ae%9e%e9%aa%8c%e6%9d%a1%e4%bb%b6" onclick="onNavClick(`#实验条件-nav`)" id="实验条件-nav">
+								<a  onclick="onNavClick(`#实验条件`)" id="实验条件-nav">
 									实验条件
 								</a>
 							</li>
@@ -876,7 +912,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e5%ae%9e%e9%aa%8c%e7%bb%93%e6%9e%9c" onclick="onNavClick(`#实验结果-nav`)" id="实验结果-nav">
+								<a  onclick="onNavClick(`#实验结果`)" id="实验结果-nav">
 									实验结果
 								</a>
 							</li>
@@ -894,7 +930,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e5%ae%9e%e9%aa%8c%e6%80%a7%e9%aa%8c%e8%af%81" onclick="onNavClick(`#实验性验证-nav`)" id="实验性验证-nav">
+								<a  onclick="onNavClick(`#实验性验证`)" id="实验性验证-nav">
 									实验性验证
 								</a>
 							</li>
@@ -916,7 +952,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e6%80%bb%e7%bb%93" onclick="onNavClick(`#总结-nav`)" id="总结-nav">
+								<a  onclick="onNavClick(`#总结`)" id="总结-nav">
 									总结
 								</a>
 							</li>
@@ -988,15 +1024,17 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                     
                     <div class="post-meta">
                         
+                        <i class="material-icons" style="font-size:20px">event_note</i>
                         <time itemprop="datePublished">
-                            2021-10-26 16:00
+                            2021-10-26
                         </time>
+                        &nbsp;
                         
 
                         
 
                         
-                            <i class="material-icons" style="">label</i>
+                            <i class="material-icons" style="font-size:20px">local_offer</i>
                             
                                 <a href="/tags/%E7%AC%94%E8%AE%B0">笔记</a>
                                 &nbsp;
@@ -1005,6 +1043,18 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                                 &nbsp;
                             
                         
+                        
+                            <i class="material-icons" style="font-size:20px">schedule</i>
+                            
+
+                            
+                            
+                            
+
+                            
+                            25 min
+                            
+                            
                         
                     </div>
                 </div>
@@ -1093,7 +1143,8 @@ $$\widetilde{G}=Rand_\epsilon(G)=G+\epsilon$$</li>
 <li>基于引入稀疏性的保护机制：
 $$\widetilde{G}=Spar_{s,t}(G)$$</li>
 <li>基于调整的保护机制：
-$$\widetilde{G}=Mod_P(G)=\mathop{\arg\min}_{G}(L_{CE}(G,x)+L_P(G,P))$$</li>
+<div>$$\widetilde{G}=Mod_P(G)=\mathop{\arg\min}_{G}(L_{CE}(G,x)+L_P(G,P))$$</div>
+</li>
 <li>基于同态加密的保护机制：
 $$\widetilde{G}=Enc(G)$$</li>
 </ul>
@@ -1104,38 +1155,40 @@ $$\widetilde{x}^*=A(\widetilde{G}):=\mathop{\arg\min}_{\widetilde{x}}L(g(\wideti
 而基于贝叶斯框架，攻击者根据公开信息来还原数据可表示为
 $$P(\widetilde{x}|\widetilde{G})=\frac{P(\widetilde{G}|\widetilde{x})P(\widetilde{x})}{P(\widetilde{G})}\propto P(\widetilde{G}|\widetilde{x})P(\widetilde{x}),$$
 因此，攻击者获得最优恢复数据的过程可表达为</p>
-<p>$$
+<div>
+$$
 \begin{aligned}
 \widetilde{x}^*
-&amp;=A(\widetilde{G})=\mathop{\arg\max}_{\widetilde{x}}log(P(\widetilde{x}|\widetilde{G}))\\<br>
-&amp;=\mathop{\arg\min}_{\widetilde{x}}[-log(P(\widetilde{G}|\widetilde{x}))-log(P(\widetilde{x}))]\\<br>
-&amp;\triangleq\mathop{\arg\min}_{\widetilde{x}}[L_1(g(\widetilde{x}),\widetilde{G})+L_2(\widetilde{x})],
+&=A(\widetilde{G})=\mathop{\arg\max}_{\widetilde{x}}log(P(\widetilde{x}|\widetilde{G}))\\\\
+&=\mathop{\arg\min}_{\widetilde{x}}[-log(P(\widetilde{G}|\widetilde{x}))-log(P(\widetilde{x}))]\\\\
+&\triangleq\mathop{\arg\min}_{\widetilde{x}}[L_1(g(\widetilde{x}),\widetilde{G})+L_2(\widetilde{x})],
 \end{aligned}
-$$</p>
+$$
+</div>
 <p>其中，$L_2=-log(P(\widetilde{x}))$ 是在为引入引入先验，例如图像的平滑性带来的先验。而 $L_1=-log(P(\widetilde{G}|\widetilde{x}))$ 则又是根据不同的攻击方式具有不同的具体形式：</p>
 <ul>
-<li>模型逆向攻击：
-$$L_1(g(\widetilde{x}),\widetilde{G})=||\widetilde{O}-O||^2.$$</li>
-<li>基于梯度的攻击：
-$$L_1(g(\widetilde{x}),\widetilde{G})=||\nabla W(\widetilde{O})-\nabla W(O)||^2.$$</li>
+<li>
+<p>模型逆向攻击：</p>
+<div>$$L_1(g(\widetilde{x}),\widetilde{G})=||\widetilde{O}-O||^2.$$</div>
+</li>
+<li>
+<p>基于梯度的攻击：</p>
+<div>$$L_1(g(\widetilde{x}),\widetilde{G})=||\nabla W(\widetilde{O})-\nabla W(O)||^2.$$</div>
+</li>
 </ul>
 <p>从攻击者角度，私有数据的重建实际上是对于私有数据知识的增加。</p>
 <h2 id="带有对抗过程的贝叶斯隐私框架">带有对抗过程的贝叶斯隐私框架</h2>
-<p>给定隐私保护机制 $M$，隐私泄露攻击 $A$，攻击者对于私有数据 $x$ 的先验分布 $F_0$，本文将贝叶斯隐私定义为
-$$BP(M,A,g,F_0)=KL(F_0||F_A(\widetilde{x}|M(g(X))))$$</p>
+<p>给定隐私保护机制 $M$，隐私泄露攻击 $A$，攻击者对于私有数据 $x$ 的先验分布 $F_0$，本文将贝叶斯隐私定义为</p>
+<div>$$BP(M,A,g,F_0)=KL(F_0||F_A(\widetilde{x}|M(g(X))))$$</div>
 <p>同时，针对攻击者对隐私数据的先验$F_0$的质量，作者进行了分类讨论：</p>
 <ul>
 <li>攻击者对私有数据几乎没有先验知识，先验接近均匀分布，即$F_0=\bar F$，此时攻击者希望复原的数据能够更贴近真实数据而非随机猜测，因此想要更高的KL散度以获得更高的知识增量；而防御者希望KL散度越低越好，以保证隐私数据的信息不被过多泄露。因此，双方之间的对抗体现为</li>
 </ul>
-<p>$$
-\mathop{max}_{A}\mathop{min}_{M}BP(M,A,g,\bar{F}).
-$$</p>
+<div>$$\mathop{max}_{A}\mathop{min}_{M}BP(M,A,g,\bar{F}).$$</div>  
 <ul>
 <li>攻击者已经大致了解私有数据的分布情况，先验分布约等于真实分布，即$F_0\approx F^*$。此时，攻击者希望复原的数据尽量服从该分布，因此想要尽量减小KL散度；而防御者则希望增大KL散度来误导攻击者。因此，双方之间的对抗体现为</li>
 </ul>
-<p>$$
-\mathop{min}_{A}\mathop{max}_{M}BP(M,A,g,F^*).
-$$</p>
+<div>$$\mathop{min}_{A}\mathop{max}_{M}BP(M,A,g,F^*).$$</div>
 <p>需要注意的是，此处的攻击与防御措施分别由攻击者与防御者双方来进行，提出的Bayesian privacy框架仅仅是为了更好对两个过程进行综合分析。</p>
 <h1 id="基于私有passport的联邦学习">基于私有Passport的联邦学习</h1>
 <p>作者综合前述分析，结合了拆分学习与Passport层，提出了基于私有Passport的联邦学习，具体架构如下。</p>
@@ -1256,7 +1309,7 @@ $$</li>
 
                     
                     <HR width="100%" id="EOF">
-		    <p style="color:#777;">Last modified on 2021-10-26</p>
+		    <p style="color:#777;">最后修改于 2021-10-26</p>
                     
                 </div>
             </div>
@@ -1266,13 +1319,13 @@ $$</li>
 
                 
                 <a class="newer-posts">
-			Next<br>No newer posts.
+			下一篇<br>已经到头啦。
                 </a>
                 
                 
                 
                 <a class="older-posts" href="/posts/maintain/">
-			Previous<br>博客维护方式
+			上一篇<br>博客维护方式
                 </a>
                 
             </nav>
@@ -1295,24 +1348,25 @@ $$</li>
     </div>
 
 
-                    </div>
+                </div>
             </div><div id="single-column-footer">
 Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
 <br>
-Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
 <br>
 
 
 <a href="https://beian.miit.gov.cn">赣 ICP 备 2021006252 号</a>
 
 <br>
-2021
-&copy;
 
-<a href="https://www.ifarewell.xyz/">Farewell</a> all content copyrights reserved.
+&copy;
+2021
+
+<a href="https://www.ifarewell.xyz/">Farewell</a> All content copyrights reserved.
 
 </div>
-            </div>
+        </div>
     
     <script src="/js/journal.js"></script>
     </body>

@@ -4,8 +4,8 @@
     <link>/</link>
     <description>Recent content on 卢肇的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright> [Farewell](https://www.ifarewell.xyz/) all content copyrights reserved.</copyright>
+    <language>zh</language>
+    <copyright> [Farewell](https://www.ifarewell.xyz/) All content copyrights reserved.</copyright>
     <lastBuildDate>Tue, 26 Oct 2021 16:00:13 +0800</lastBuildDate>
     
         <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
@@ -97,7 +97,8 @@ $$\widetilde{G}=Rand_\epsilon(G)=G+\epsilon$$&lt;/li&gt;
 &lt;li&gt;基于引入稀疏性的保护机制：
 $$\widetilde{G}=Spar_{s,t}(G)$$&lt;/li&gt;
 &lt;li&gt;基于调整的保护机制：
-$$\widetilde{G}=Mod_P(G)=\mathop{\arg\min}_{G}(L_{CE}(G,x)+L_P(G,P))$$&lt;/li&gt;
+&lt;div&gt;$$\widetilde{G}=Mod_P(G)=\mathop{\arg\min}_{G}(L_{CE}(G,x)+L_P(G,P))$$&lt;/div&gt;
+&lt;/li&gt;
 &lt;li&gt;基于同态加密的保护机制：
 $$\widetilde{G}=Enc(G)$$&lt;/li&gt;
 &lt;/ul&gt;
@@ -108,38 +109,40 @@ $$\widetilde{x}^*=A(\widetilde{G}):=\mathop{\arg\min}_{\widetilde{x}}L(g(\wideti
 而基于贝叶斯框架，攻击者根据公开信息来还原数据可表示为
 $$P(\widetilde{x}|\widetilde{G})=\frac{P(\widetilde{G}|\widetilde{x})P(\widetilde{x})}{P(\widetilde{G})}\propto P(\widetilde{G}|\widetilde{x})P(\widetilde{x}),$$
 因此，攻击者获得最优恢复数据的过程可表达为&lt;/p&gt;
-&lt;p&gt;$$
+&lt;div&gt;
+$$
 \begin{aligned}
 \widetilde{x}^*
-&amp;amp;=A(\widetilde{G})=\mathop{\arg\max}_{\widetilde{x}}log(P(\widetilde{x}|\widetilde{G}))\\&lt;br&gt;
-&amp;amp;=\mathop{\arg\min}_{\widetilde{x}}[-log(P(\widetilde{G}|\widetilde{x}))-log(P(\widetilde{x}))]\\&lt;br&gt;
-&amp;amp;\triangleq\mathop{\arg\min}_{\widetilde{x}}[L_1(g(\widetilde{x}),\widetilde{G})+L_2(\widetilde{x})],
+&amp;=A(\widetilde{G})=\mathop{\arg\max}_{\widetilde{x}}log(P(\widetilde{x}|\widetilde{G}))\\\\
+&amp;=\mathop{\arg\min}_{\widetilde{x}}[-log(P(\widetilde{G}|\widetilde{x}))-log(P(\widetilde{x}))]\\\\
+&amp;\triangleq\mathop{\arg\min}_{\widetilde{x}}[L_1(g(\widetilde{x}),\widetilde{G})+L_2(\widetilde{x})],
 \end{aligned}
-$$&lt;/p&gt;
+$$
+&lt;/div&gt;
 &lt;p&gt;其中，$L_2=-log(P(\widetilde{x}))$ 是在为引入引入先验，例如图像的平滑性带来的先验。而 $L_1=-log(P(\widetilde{G}|\widetilde{x}))$ 则又是根据不同的攻击方式具有不同的具体形式：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;模型逆向攻击：
-$$L_1(g(\widetilde{x}),\widetilde{G})=||\widetilde{O}-O||^2.$$&lt;/li&gt;
-&lt;li&gt;基于梯度的攻击：
-$$L_1(g(\widetilde{x}),\widetilde{G})=||\nabla W(\widetilde{O})-\nabla W(O)||^2.$$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;模型逆向攻击：&lt;/p&gt;
+&lt;div&gt;$$L_1(g(\widetilde{x}),\widetilde{G})=||\widetilde{O}-O||^2.$$&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;基于梯度的攻击：&lt;/p&gt;
+&lt;div&gt;$$L_1(g(\widetilde{x}),\widetilde{G})=||\nabla W(\widetilde{O})-\nabla W(O)||^2.$$&lt;/div&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;从攻击者角度，私有数据的重建实际上是对于私有数据知识的增加。&lt;/p&gt;
 &lt;h2 id=&#34;带有对抗过程的贝叶斯隐私框架&#34;&gt;带有对抗过程的贝叶斯隐私框架&lt;/h2&gt;
-&lt;p&gt;给定隐私保护机制 $M$，隐私泄露攻击 $A$，攻击者对于私有数据 $x$ 的先验分布 $F_0$，本文将贝叶斯隐私定义为
-$$BP(M,A,g,F_0)=KL(F_0||F_A(\widetilde{x}|M(g(X))))$$&lt;/p&gt;
+&lt;p&gt;给定隐私保护机制 $M$，隐私泄露攻击 $A$，攻击者对于私有数据 $x$ 的先验分布 $F_0$，本文将贝叶斯隐私定义为&lt;/p&gt;
+&lt;div&gt;$$BP(M,A,g,F_0)=KL(F_0||F_A(\widetilde{x}|M(g(X))))$$&lt;/div&gt;
 &lt;p&gt;同时，针对攻击者对隐私数据的先验$F_0$的质量，作者进行了分类讨论：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;攻击者对私有数据几乎没有先验知识，先验接近均匀分布，即$F_0=\bar F$，此时攻击者希望复原的数据能够更贴近真实数据而非随机猜测，因此想要更高的KL散度以获得更高的知识增量；而防御者希望KL散度越低越好，以保证隐私数据的信息不被过多泄露。因此，双方之间的对抗体现为&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;$$
-\mathop{max}_{A}\mathop{min}_{M}BP(M,A,g,\bar{F}).
-$$&lt;/p&gt;
+&lt;div&gt;$$\mathop{max}_{A}\mathop{min}_{M}BP(M,A,g,\bar{F}).$$&lt;/div&gt;  
 &lt;ul&gt;
 &lt;li&gt;攻击者已经大致了解私有数据的分布情况，先验分布约等于真实分布，即$F_0\approx F^*$。此时，攻击者希望复原的数据尽量服从该分布，因此想要尽量减小KL散度；而防御者则希望增大KL散度来误导攻击者。因此，双方之间的对抗体现为&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;$$
-\mathop{min}_{A}\mathop{max}_{M}BP(M,A,g,F^*).
-$$&lt;/p&gt;
+&lt;div&gt;$$\mathop{min}_{A}\mathop{max}_{M}BP(M,A,g,F^*).$$&lt;/div&gt;
 &lt;p&gt;需要注意的是，此处的攻击与防御措施分别由攻击者与防御者双方来进行，提出的Bayesian privacy框架仅仅是为了更好对两个过程进行综合分析。&lt;/p&gt;
 &lt;h1 id=&#34;基于私有passport的联邦学习&#34;&gt;基于私有Passport的联邦学习&lt;/h1&gt;
 &lt;p&gt;作者综合前述分析，结合了拆分学习与Passport层，提出了基于私有Passport的联邦学习，具体架构如下。&lt;/p&gt;
@@ -257,7 +260,7 @@ $$&lt;/li&gt;
 &lt;p&gt;文章对于隐私保护方式、攻击方式以及隐私保护评估体系的形式化做得较好，值得学习借鉴。&lt;/p&gt;
 &lt;p&gt;文章的理论推导过程中用到一些经验性的结论难以通过推导直接得出，因此转而对这些结论进行实验性的检验与说明，这样的做法也很值得借鉴。&lt;/p&gt;
 &lt;p&gt;总的来说，无论是从研究上还是写作上，本文都是一篇很有价值的文章，值得学习借鉴。在组会上进行分享时，本文也引起了老师与同学的广泛讨论，促进了实验室成员相互之间的深度交流。这也是本人在组会上分享文章时第一次获得大家如此热烈的反响，体验极佳🥰🥰，也让本人深刻体会到阅读与分享好文章所带来的收获感与成就感。&lt;/p&gt;
-- /posts/federated_deep_learning_with_bayesian_privacy/ -  [Farewell](https://www.ifarewell.xyz/) all content copyrights reserved.</description>
+- /posts/federated_deep_learning_with_bayesian_privacy/ -  [Farewell](https://www.ifarewell.xyz/) All content copyrights reserved.</description>
         </item>
     
     
@@ -310,7 +313,7 @@ git push -u origin master/server
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;此处master是服务器本地的分支名称，需要注意与远端的master分支相区别。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;至此，一篇新文章成功被创建——编写——部署至本人的&lt;a href=&#34;https://ifarewell.github.io&#34;&gt; Github Page &lt;/a&gt;与&lt;a href=&#34;http://81.68.255.144&#34;&gt; 个人服务器 &lt;/a&gt;上。希望这篇文章对想要基于 hugo 进行个人博客编写的读者有所帮助，也希望本人能够勤快、熟练地更博，尽量少参考这篇备用博文🤪🤪。&lt;/p&gt;
-- /posts/maintain/ -  [Farewell](https://www.ifarewell.xyz/) all content copyrights reserved.</description>
+- /posts/maintain/ -  [Farewell](https://www.ifarewell.xyz/) All content copyrights reserved.</description>
         </item>
     
     
@@ -323,7 +326,7 @@ git push -u origin master/server
         <guid>/posts/first/</guid>
         <description>卢肇的博客 /posts/first/ -&lt;p&gt;从头开始维护个人博客的想法一直在脑海中持续了很久。一方面，通过整个搭建维护流程，可以些许弥补本人计网知识水平和工程经验的欠缺，另一方面，也是希望在社交媒体之外有一个记录个人技术经历与生活碎碎念的场所。但由于个人学业任务、缺乏启动契机&lt;del&gt; 以及游戏太好玩 &lt;/del&gt;等因素，一直未能将该想法付诸实现😜😜。&lt;/p&gt;
 &lt;p&gt;适逢618云服务器大促、本科学业结束、小学期留校搬砖等一系列情况，于是本人决定择日不如撞日，就此开始维护个人博客，希望能坚持下去吧🤣🤣。&lt;/p&gt;
-- /posts/first/ -  [Farewell](https://www.ifarewell.xyz/) all content copyrights reserved.</description>
+- /posts/first/ -  [Farewell](https://www.ifarewell.xyz/) All content copyrights reserved.</description>
         </item>
     
     
