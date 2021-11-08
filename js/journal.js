@@ -264,20 +264,20 @@ document
 
 // Drawer
 
-var openDrawer = function () {
+var toggleDrawer = function () {
   document.getElementsByTagName("html")[0].style.overflow = "hidden";
   document
     .getElementById("drawer-mask")
-    .classList.add("single-column-drawer-mask");
+    .classList.toggle("single-column-drawer-mask");
   document
     .getElementById("drawer")
-    .classList.add("single-column-drawer-container-active");
+    .classList.toggle("single-column-drawer-container-active");
 };
 
 document
   .getElementById("nav_dropdown_btn")
   .addEventListener("click", function () {
-    openDrawer();
+    toggleDrawer();
   });
 
 var closeDrawer = function () {
